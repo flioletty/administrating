@@ -1,0 +1,22 @@
+<div class="user-view" [class]="user.gender">
+    <a [routerLink]="['/edit', user.id]" class="user-view__link-elem">
+        <div class="user-view__login">
+            {{user.login}}
+        </div> 
+        <div class="user-view__info">
+            Почта: {{user.email}}
+        </div> 
+        <div *ngIf="user.gender" class="user-view__info">
+            Пол: {{user.gender | firstLetter}}
+        </div> 
+        <div *ngIf="user.date" class="user-view__info">
+            Дата рождения: {{user.date}}
+        </div> 
+        <div *ngIf="user.secretWord" class="user-view__info">
+            Секретное слово: {{user.secretWord | reverse}}
+        </div> 
+        <div *ngIf="user.dateModified" class="user-view__info">
+            Дата редактирования: {{user.dateModified | date:"dd/MM/yyyy"}}
+        </div> 
+    </a>
+</div>

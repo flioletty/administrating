@@ -1,0 +1,54 @@
+.create-user{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top: 20%;
+    padding: 20px;
+    border: 1px var(--border-color) solid;
+    border-radius: 20px;
+
+    &__input{
+        margin: 10px;
+        height: 35px;
+        border-radius: 10px;
+
+        &:focus{
+            background-color: var(--light-color);
+        }
+    }
+
+    &__title{
+        font-size: 2rem;
+        font-weight: bold;
+        margin: auto;
+    }
+
+    &__description{
+        margin: 10px;
+        font-size: 1.1rem;
+    }
+
+    &__button{
+        height: 35px;
+        border-radius: 5px;
+        background-color: var(--main-color);
+        font-size: 1.05rem;
+        cursor: pointer;
+
+        &:hover{
+            background-color: var(--dark-color);
+        }
+
+        &:active{
+            background-color: var(--light-color);
+        }
+
+        &:disabled{
+            background-color: var(--dark-color);
+            cursor: default;
+        }
+    }
+}
+  

@@ -1,0 +1,52 @@
+<form class="create-user" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div *ngIf="!user" class="create-user__title">Регистрация нового пользователя</div>
+    <div *ngIf="user" class="create-user__title">Редактирование пользователя {{user.login}}</div>
+    <div class="create-user__description">Заполните форму</div>
+    
+    <input class="create-user__input create-user__input_text" 
+            type="text" 
+            name="login" 
+            maxlength="30" 
+            placeholder="Логин" 
+            (input)="enableButton()" 
+            formControlName="login">
+
+    <select class="create-user__input create-user__input_text" 
+            type="" 
+            name="gender" 
+            placeholder="Пол"
+            formControlName="gender">
+            <option value disabled selected>Пол:</option>
+            <option>Мужчина</option>
+            <option>Женщина</option>
+            <option>Другое</option>            
+        </select>
+
+    <input class="create-user__input create-user__input_date" 
+            type="date" 
+            name="birth_date" 
+            placeholder="Дата рождения"
+            formControlName="date">
+
+    <input class="create-user__input create-user__input_email" 
+            type="email" 
+            name="email" 
+            maxlength="30" 
+            placeholder="Электронная почта" 
+            (input)="enableButton()" 
+            formControlName="email">
+
+    <input class="create-user__input create-user__input_text" 
+            type="text" 
+            name="secret_word" 
+            maxlength="30" 
+            placeholder="Кодовое слово"
+            formControlName="secretWord">
+
+        <button class="create-user__button" 
+            type="submit" 
+            [disabled]="buttonDisabled">
+            Сохранить
+        </button>
+
+</form>

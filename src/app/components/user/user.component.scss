@@ -1,0 +1,38 @@
+.user-view{
+    border-radius: 10px;
+    border: 1px var(--border-color) solid;
+    padding: 10px 20px;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 130px;
+    word-wrap: break-word;
+    background-color: var(--main-color);
+    margin: 15px;
+
+    &__info{
+        margin: 5px;
+        border-bottom: 1px var(--border-color) solid;
+    }
+
+    &__login{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    &__link-elem{
+        text-decoration: none;
+        color: var(--text-color);
+    }
+}
+
+.Мужчина{
+    background-color: var(--man-color);
+}
+
+.Женщина{
+    background-color: var(--woman-color);
+}
+
+.Другое{
+    background-image: url('../../../../rainbow.jpg');
+}

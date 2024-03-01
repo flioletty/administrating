@@ -1,0 +1,9 @@
+<main>
+    <header class="header">
+        <a [routerLink]="['/view']" routerLinkActive="header__link_active-link" class="header__link header__link_accounts">Аккаунты</a>
+        <a [routerLink]="['/administration']" routerLinkActive="header__link_active-link" class="header__link header__link_administrating">Администрирование</a>
+    </header>
+    <section class="content">
+        <router-outlet></router-outlet>
+    </section>
+</main>

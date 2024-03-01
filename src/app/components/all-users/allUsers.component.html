@@ -1,0 +1,6 @@
+<div class="users-list">
+    <app-user *ngFor="let user of users; let i = index" [user]="user" [id]="i"></app-user>
+    <div *ngIf="users.length === 0" class="users-list__no-users">
+        Нет данных
+    </div>
+</div>
